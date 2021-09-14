@@ -1,0 +1,63 @@
+.contact_main{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.contact_card{
+  margin-bottom: 5%;
+  background-color: white;
+  width: 50%;
+  padding: 30px 40px;
+  border-radius: 8px;
+}
+.contact_card h2{
+  font-weight: bold;
+  margin: 30px 0px;
+  background: #535353;
+  background: linear-gradient(to right, #333333, #536976);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.contact_card input{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+.contact_card textarea{
+  height: 120px;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+.contact_card label{
+  font-weight: bold;
+  color: #333333;
+}
+.contact_card input:focus{
+  background-color: whitesmoke;
+  box-shadow: none;
+  border-bottom: 2.5px solid salmon;
+}
+.contact_card textarea:focus{
+  background-color: whitesmoke;
+  box-shadow: none;
+}
+.contact_btn{
+  border: 3px solid;
+  margin: 20px 0px;
+  height: 50px;
+  border-radius: 10px;
+  background: transparent;
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.contact_btn:hover{
+  color: #333333;
+  border: 1px #ED4264;
+  background: #ED4264;  
+  background: linear-gradient(to right, #FFEDBC, #ED4264); 
+}
+
