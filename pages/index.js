@@ -43,7 +43,8 @@ export async function getStaticProps() {
         ingredients: el.ingredients,
         procedure: el.procedure
       })).splice(0, 6)
-    }
+    },
+    revalidate: true
   }
 };
 
