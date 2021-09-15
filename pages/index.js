@@ -4,11 +4,12 @@ import CardLanding from '../component/CardLanding';
 import classes from '../styles/Home.module.css';
 
 
+
 const HomePage = ({ recipes }) => {
   return <section className={`${classes.home_section}`}>
     <article className={`shadow-lg ${classes.image_section}`}>
       <Image width="1300" height="350"
-        src="https://res.cloudinary.com/dqdyvlpjx/image/upload/v1631547331/landing_image_ebvwzp.jpg"
+        src={'https://res.cloudinary.com/dqdyvlpjx/image/upload/v1631547331/landing_image_ebvwzp.jpg'}
         className={`img-fluid ${classes.image_landing}`} alt="Responsive" />
       <article className={`text-center ${classes.img_text}`}>
         <h1>Tasty & Juciy</h1>

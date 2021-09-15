@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/link-passhref */
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
 import classes from './CardLanding.module.css';
 import Link from 'next/link';
@@ -10,6 +11,9 @@ import { createMainContext } from './Context';
 const CardLanding = ({ recipes }) => {
   const [state, setState] = useState('');
   const { setText } = useContext(createMainContext);
+  const router = useRouter();
+  var path = router.pathname;
+
 
   var filterData = [];
   if (state) {
@@ -22,13 +26,18 @@ const CardLanding = ({ recipes }) => {
 
 
   return <main className="row p-2 mt-5 mb-5">
-    <h2 className="mt-1 mb-5 text-capitalize">Popular Recipes : <span className="badge bg-info">{state}</span></h2>
-    <div className={`col-md-2 ${classes.un_list}`}>
-      <li onClick={() => setState('chicken')}>Chicken</li>
-      <li onClick={() => setState('cakes')}>Cakes</li>
-      <li className={classes.reset} onClick={() => setState('')}>Reset</li>
-    </div>
-    <div className={`col-md-10 ${classes.cards}`}>
+    {
+      path !== '/'
+        ? null
+        : <> <h2 className="mt-1 mb-5 text-capitalize">Popular Recipes : <span className="badge bg-info">{state}</span></h2>
+          <div className={`col-md-2 ${classes.un_list}`}>
+            <li onClick={() => setState('chicken')}>Chicken</li>
+            <li onClick={() => setState('cakes')}>Cakes</li>
+            <li className={classes.reset} onClick={() => setState('')}>Reset</li>
+          </div>
+        </>
+    }
+    <div className={`${path !== '/' ? 'col-md-12 justify-content-center' : 'col-md-10'} ${classes.cards}`}>
       {
         filterData.map((item, i) => {
           const { title, img, prep_time, id } = item;
