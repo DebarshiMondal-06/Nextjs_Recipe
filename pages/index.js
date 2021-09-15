@@ -44,7 +44,7 @@ export async function getStaticProps() {
         procedure: el.procedure
       })).splice(0, 6)
     },
-    revalidate: 1
+    revalidate: 10
   }
 };
 
