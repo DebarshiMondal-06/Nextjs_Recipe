@@ -40,7 +40,7 @@ export async function getStaticProps() {
         procedure: el.procedure
       }))
     },
-    revalidate: 5,
+    revalidate: 2,
   }
 };
 
