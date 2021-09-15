@@ -42,7 +42,7 @@ export async function getStaticProps() {
         description: el.description,
         ingredients: el.ingredients,
         procedure: el.procedure
-      }))
+      })).splice(0, 6)
     }
   }
 };
