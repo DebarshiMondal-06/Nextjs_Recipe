@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import classes from '../../styles/input.module.css';
-
+import { useRouter } from 'next/router';
 
 
 const Add = () => {
+  const router = useRouter();
   const [value, setValue] = useState({
     title: '', category: '', p_time: '', c_time: '',
     procedure: '', description: '', ingredients: '', url: ''
