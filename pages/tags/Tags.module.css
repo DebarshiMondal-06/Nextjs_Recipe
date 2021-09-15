@@ -1,0 +1,21 @@
+.tags_section{
+  margin-top: 10%;
+  width: 100%;
+}
+.tags{
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tags div{
+  text-align: center;
+  width: 350px;
+  color: #333333;
+  font-size: 40px;
+  text-transform: capitalize;
+  background-color: burlywood;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

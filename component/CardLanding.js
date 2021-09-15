@@ -8,7 +8,7 @@ import { createMainContext } from './Context';
 
 
 
-const CardLanding = ({ recipes }) => {
+const CardLanding = ({ recipes, text }) => {
   const [state, setState] = useState('');
   const { setText } = useContext(createMainContext);
   const router = useRouter();
@@ -19,6 +19,11 @@ const CardLanding = ({ recipes }) => {
   if (state) {
     filterData = recipes.filter((item) => {
       return item.category === state;
+    });
+  }
+  else if (text && text.length > 2) {
+    filterData = recipes.filter((item) => {
+      return item.category === text;
     });
   } else {
     filterData = recipes;
