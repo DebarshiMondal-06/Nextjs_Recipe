@@ -21,7 +21,7 @@ const HomePage = ({ recipes }) => {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const MONGO_URI = 'mongodb+srv://mern-stack:mondal11@mern.zbgib.mongodb.net/Recipe';
   const client = await MongoClient.connect(MONGO_URI);
   var db = client.db();
@@ -44,6 +44,7 @@ export async function getServerSideProps() {
         procedure: el.procedure
       })).splice(0, 6)
     },
+    revalidate: 1,
   }
 };
 
