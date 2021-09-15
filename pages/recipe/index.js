@@ -39,7 +39,8 @@ export async function getStaticProps() {
         ingredients: el.ingredients,
         procedure: el.procedure
       }))
-    }
+    },
+    revalidate: 5,
   }
 };
 
