@@ -6,7 +6,7 @@ import CardLanding from '../../component/CardLanding';
 
 const RecipeIndex = ({ recipes }) => {
   return <section className="mt-5">
-    <article  style={{ textAlign: 'right'}}>
+    <article style={{ textAlign: 'right' }}>
       <Link href="/recipe/add">
         <button className="btn btn-primary" style={{ width: 150 }}>Add Recipe</button>
       </Link>
@@ -17,7 +17,7 @@ const RecipeIndex = ({ recipes }) => {
   </section>
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const MONGO_URI = 'mongodb+srv://mern-stack:mondal11@mern.zbgib.mongodb.net/Recipe';
   const client = await MongoClient.connect(MONGO_URI);
   var db = client.db();
@@ -39,8 +39,7 @@ export async function getStaticProps() {
         ingredients: el.ingredients,
         procedure: el.procedure
       }))
-    },
-    revalidate: 2,
+    }
   }
 };
 
