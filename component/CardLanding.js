@@ -30,14 +30,14 @@ const CardLanding = ({ recipes, text }) => {
   }
 
 
-  return <main className="row p-2 mt-5 mb-5">
+  return <main className="row mt-4 p-2 mb-5">
     {
       path !== '/'
         ? null
-        : <> <h2 className="mt-1 mb-5 text-capitalize">Popular Recipes : <span className="badge bg-info">{state}</span></h2>
+        : <> <h2 className="mb-5 text-capitalize">Popular Recipes : <span className="badge bg-info">{state}</span></h2>
           <div className={`col-md-2 ${classes.un_list}`}>
-            <li onClick={() => setState('chicken')}>Chicken</li>
-            <li onClick={() => setState('cakes')}>Cakes</li>
+            <li onClick={() => setState('lunch')}>Lunch</li>
+            <li onClick={() => setState('breakfast')}>Breakfast</li>
             <li className={classes.reset} onClick={() => setState('')}>Reset</li>
           </div>
         </>

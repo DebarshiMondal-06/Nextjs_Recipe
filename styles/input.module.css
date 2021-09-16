@@ -49,15 +49,28 @@
   margin: 20px 0px;
   height: 50px;
   border-radius: 10px;
-  background: transparent;
   color: #333333;
   font-weight: bold;
   letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  background: transparent;
 }
 .contact_btn:hover{
   color: #333333;
-  border: 1px #ED4264;
-  background: #ED4264;  
-  background: linear-gradient(to right, #FFEDBC, #ED4264); 
+  border: 1px #D1913c;
+  background: #D1913C;  
+  background: linear-gradient(to right, #FFD194, #D1913C); 
+}
+.contact_btn:focus{
+  box-shadow: none;
+  border: 1px #D1913c;
+  background: #D1913C;  
+  background: linear-gradient(to right, #FFD194, #D1913C);
 }
 
+@media only screen and (max-width: 990px) {
+  .contact_card {
+    width: 90%;
+  }
+}

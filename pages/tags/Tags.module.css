@@ -1,21 +1,28 @@
 .tags_section{
   margin-top: 10%;
   width: 100%;
+  margin-bottom: 12%;
 }
 .tags{
   display: flex;
+  justify-content: center;
   gap: 3em;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .tags div{
   text-align: center;
   width: 350px;
-  color: #333333;
   font-size: 40px;
   text-transform: capitalize;
-  background-color: burlywood;
+  background: #D1913C;  
+  background: linear-gradient(to right, #FFD194, #D1913C); 
   padding: 20px;
   border-radius: 5px;
+  color: white;
   cursor: pointer;
+  border: 3px solid burlywood;
+  transition: 0.3s all;
+}
+.tags div:hover{
+  transform: translateY(-5px);
 }

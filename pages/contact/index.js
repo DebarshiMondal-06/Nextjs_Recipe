@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import classes from '../../styles/input.module.css';
+import Loader from '../../component/Loader';
 import axios from 'axios';
+
 
 
 const ContactIndex = () => {
   const router = useRouter();
+  const [btnDis, setBtnDis] = useState(false);
   const [value, setValue] = useState({
     email: '',
     firstname: '',
@@ -17,12 +20,14 @@ const ContactIndex = () => {
 
   const submit_data = () => {
     if (email && firstname && lastname && message) {
+      setBtnDis(true);
       axios({
         method: 'POST',
         url: '/api/contact',
         data: value
       }).then(() => {
         setValue({ email: '', firstname: '', lastname: '', message: '' });
+        setBtnDis(false);
         setTimeout(() => {
           router.push('/');
         }, 1000);
@@ -59,8 +64,11 @@ const ContactIndex = () => {
           onChange={(e) => setValue({ ...value, message: e.target.value })}></textarea>
       </div>
       <button type="button" className={`btn btn-primary ${classes.contact_btn}`}
-        onClick={() => submit_data()}
-      >Submit Here</button>
+        onClick={() => submit_data()}>
+        {
+          btnDis ? <Loader /> : <span className="mt-1">Submit Here</span>
+        }
+      </button>
     </form>
   </section>
 }

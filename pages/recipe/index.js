@@ -12,7 +12,7 @@ const RecipeIndex = ({ recipes }) => {
 
 
 
-  return <section className="mt-5">
+  return <section className="mt-5" style={{marginBottom: '12%'}}>
     <article style={{ textAlign: 'right' }}>
       <Link href="/recipe/add">
         <button className="btn btn-primary" style={{ width: 150 }}>Add Recipe</button>

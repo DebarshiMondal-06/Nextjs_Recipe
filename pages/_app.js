@@ -2,6 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { Context } from "../component/Context";
 import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 import '../styles/globals.css'
 
 
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar>
         <Component {...pageProps} />
       </Navbar>
+        <Footer />
     </Context>
     <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></Script>
   </>

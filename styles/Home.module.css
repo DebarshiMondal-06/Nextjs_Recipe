@@ -23,7 +23,7 @@
   font-weight: 500;
 }
 .image_landing{
-  border-radius: 10px;
+  border-radius: 6px;
   opacity: 0.77;
 }
 
@@ -36,6 +36,6 @@
 
 @media only screen and (max-width: 990px) {
   .image_section{
-  height: 350px!important;
+  height: 300px!important;
   }
 }

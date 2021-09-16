@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import { MongoClient } from 'mongodb';
 import { useContext } from 'react';
 import classes from './Tags.module.css';
@@ -23,7 +24,7 @@ const IndexTags = ({ recipes }) => {
       {
         filterChars.map((item, i) => {
           return <Link key={i} href="/recipe">
-            <div className="shadow-lg" onClick={() => setText(item)}>
+            <div className="shadow" onClick={() => setText(item)}>
               {item}
             </div>
           </Link>

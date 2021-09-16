@@ -41,6 +41,7 @@
 }
 .recipe_tags span{
   text-transform: capitalize;
+  cursor: pointer;
 }
 .recipe_part{
   padding: 10px;
