@@ -1,13 +1,20 @@
 /* eslint-disable @next/next/link-passhref */
 import { MongoClient } from 'mongodb';
 import Link from 'next/link';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import CardLanding from '../../component/CardLanding';
 import { createMainContext } from '../../component/Context';
+import Footer from '../../component/Footer';
+import Spinner from '../../component/Spinner';
 
 
 const RecipeIndex = ({ recipes }) => {
   const { text } = useContext(createMainContext);
+  const [state, setState] = useState(true);
+  setTimeout(() => {
+    setState(false);
+  }, 2000);
+
   if (typeof window !== 'undefined') {
     document.body.style.backgroundImage = `none`;
     document.body.style.backgroundSize = 'none'
@@ -15,16 +22,19 @@ const RecipeIndex = ({ recipes }) => {
 
 
 
-
-  return <section className="mt-5" style={{marginBottom: '12%'}}>
+  if (state) {
+    return <Spinner />
+  }
+  return <section className="mt-5">
     <article style={{ textAlign: 'right' }}>
       <Link href="/recipe/add">
         <button className="btn btn-primary" style={{ width: 150 }}>Add Recipe</button>
       </Link>
     </article>
-    <main className="mt-5 w-100">
+    <main className="w-100"  style={{marginBottom: '15%'}}>
       <CardLanding recipes={recipes} text={text} />
     </main>
+    <Footer />
   </section>
 }
 

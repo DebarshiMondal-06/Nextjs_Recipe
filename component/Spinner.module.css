@@ -1,0 +1,18 @@
+.spinner{
+  text-align: center;
+  animation: rotating 2s linear infinite;
+  border-radius: 50%;
+  margin-top: 20%;
+  height: 100%;
+}
+
+
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

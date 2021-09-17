@@ -18,7 +18,7 @@ const ContactIndex = () => {
   const { email, firstname, lastname, message } = value;
   
   if (typeof window !== 'undefined') {
-    document.body.style.backgroundImage = `url('https://wallpaperaccess.com/full/767277.jpg')`;
+    document.body.style.backgroundImage = `url('contact.jpg')`;
     document.body.style.backgroundSize = 'cover';    
   }
 

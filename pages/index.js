@@ -1,18 +1,31 @@
+import { useState } from 'react';
 import { MongoClient } from 'mongodb';
 import Image from 'next/image';
 import CardLanding from '../component/CardLanding';
 import classes from '../styles/Home.module.css';
+import Spinner from '../component/Spinner';
+import Footer from '../component/Footer';
 
 
 
 const HomePage = ({ recipes }) => {
+  const [state, setState] = useState(true);
+  setTimeout(() => {
+    setState(false);
+  }, 2000);
+
+  
   if (typeof window !== 'undefined') {
     document.body.style.backgroundImage = `none`;
     document.body.style.backgroundSize = 'none'
+  };
+
+
+
+
+  if (state) {
+    return <Spinner />
   }
-
-
-
   return <section className={`${classes.home_section}`}>
     <article className={`shadow-lg ${classes.image_section}`}>
       <Image width="1300" height="350"
@@ -24,6 +37,7 @@ const HomePage = ({ recipes }) => {
       </article>
     </article>
     <CardLanding recipes={recipes} />
+    <Footer />
   </section>
 }
 

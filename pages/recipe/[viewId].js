@@ -5,6 +5,8 @@ import React, { useContext, useEffect } from 'react';
 import { createMainContext } from '../../component/Context';
 import { useRouter } from 'next/router';
 import classes from './View.module.css';
+import Spinner from '../../component/Spinner';
+
 
 
 const View = () => {
@@ -28,11 +30,11 @@ const View = () => {
   };
 
 
-  return <section className={`${classes.view_recipe} mt-5`} style={{ marginBottom: text.ingredients ? '0%' : '30%' }}>
+  return <section className={`${classes.view_recipe}`} style={{ marginBottom: text.ingredients ? '0%' : '30%' }}>
     {
       !text.ingredients
-        ? <section className="h3 mt-5 text-center">Loading...</section>
-        : <div className="card  shadow p-3">
+        ? <section className="h3 text-center mt-5">Cooking Up...</section>
+        : <div className="card  shadow p-3 mt-5">
           <main className="row">
             <div className="col-md-5" style={{ padding: '10px 20px' }}>
               <Image src={`${text.img}`}
