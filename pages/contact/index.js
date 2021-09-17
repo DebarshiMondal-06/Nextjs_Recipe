@@ -26,13 +26,14 @@ const ContactIndex = () => {
         url: '/api/contact',
         data: value
       }).then(() => {
-        setValue({ email: '', firstname: '', lastname: '', message: '' });
-        setBtnDis(false);
-        setTimeout(() => {
-          router.push('/');
-        }, 1000);
-      })
-        .catch(() => { });
+        axios.get(`/api/sendEmail?email=${email}&name=${firstname}`).then(() => {
+          setValue({ email: '', firstname: '', lastname: '', message: '' });
+          setBtnDis(false);
+          setTimeout(() => {
+            router.push('/');
+          }, 1000);
+        })
+      }).catch(() => { });
     };
   };
 
