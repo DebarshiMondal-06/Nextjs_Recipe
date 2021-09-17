@@ -48,7 +48,7 @@ const CardLanding = ({ recipes, text }) => {
           const { title, img, prep_time, id } = item;
           return <Link key={i} href="/recipe/view">
             <div className="card" onClick={() => setText(item)} style={{ width: '21rem', border: 'none', cursor: 'pointer' }}>
-              <Image src={`https://res.cloudinary.com/dqdyvlpjx/image/upload/${img}`} className={`${classes.card_image} p-3 card-img-top`}
+              <Image src={`${img}`} className={`${classes.card_image} p-3 card-img-top`}
                 alt="SOME" width="300" height="200" />
               <div className="card-body" style={{ marginTop: -15 }}>
                 <h4 className="h5 card-title p-0">{title}</h4>

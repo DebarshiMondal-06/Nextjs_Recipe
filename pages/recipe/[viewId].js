@@ -35,7 +35,7 @@ const View = () => {
         : <div className="card  shadow p-3">
           <main className="row">
             <div className="col-md-5" style={{ padding: '10px 20px' }}>
-              <Image src={`https://res.cloudinary.com/dqdyvlpjx/image/upload/${text.img}`}
+              <Image src={`${text.img}`}
                 className={`${classes.recipe_img} rounded p-3 card-img-top`}
                 alt="SOME" width="450" height="350" />
             </div >

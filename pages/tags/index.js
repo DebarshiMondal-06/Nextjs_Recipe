@@ -19,7 +19,7 @@ const IndexTags = ({ recipes }) => {
 
 
 
-  return <section className={`${classes.tags_section}`}>
+  return <section className={`${classes.tags_section}`} style={{marginBottom: '15%'}}>
     <article className={`${classes.tags}`}>
       {
         filterChars.map((item, i) => {

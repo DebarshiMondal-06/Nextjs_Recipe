@@ -32,11 +32,11 @@ const Navbar = ({ children }) => {
                 <span>Tags</span>
               </Link>
             </li>
-            <li className={`nav-item ${classes.items_nav}`}>
+            {/* <li className={`nav-item ${classes.items_nav}`}>
               <Link className="nav-link" href="/newset">
                 <span>Newest</span>
               </Link>
-            </li>
+            </li> */}
             <li className={`nav-item ${classes.items_nav}`} onClick={() => setText('')}>
               <Link className="nav-link" href="/recipe">
                 <span>Recipe</span>
