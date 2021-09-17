@@ -13,7 +13,7 @@ const sendEmail = async (req, res) => {
       <p style="font-size: 28px;">Hi<b> ${name}</b></p>
       <h3>Thanks for reaching to us!</h3>
       <p>Here are some new recipes you could checkout</p>
-      <a href="http://localhost:3000/recipe">
+      <a href="https://fullstack-recipe.vercel.app/recipe">
       <button style="padding: 20px; background-color: orange; border-radius: 8px; border: none; color: white;">
        Check Here </button>
       </a>
