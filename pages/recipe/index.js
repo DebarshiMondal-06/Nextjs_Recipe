@@ -8,6 +8,10 @@ import { createMainContext } from '../../component/Context';
 
 const RecipeIndex = ({ recipes }) => {
   const { text } = useContext(createMainContext);
+  if (typeof window !== 'undefined') {
+    document.body.style.backgroundImage = `none`;
+    document.body.style.backgroundSize = 'none'
+  }
 
 
 

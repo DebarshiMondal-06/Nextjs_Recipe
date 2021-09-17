@@ -13,8 +13,8 @@ const View = () => {
 
   if (typeof window !== 'undefined' && !text.ingredients) {
     router.push('/recipe');
-  }
-
+  }  
+ 
 
   if (text.ingredients) {
     var arrIng = []

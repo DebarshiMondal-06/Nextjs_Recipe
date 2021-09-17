@@ -9,8 +9,10 @@ import { createMainContext } from '../../component/Context';
 
 const IndexTags = ({ recipes }) => {
   const { setText } = useContext(createMainContext);
-
-
+  if (typeof window !== 'undefined') {
+    document.body.style.backgroundImage = `none`;
+    document.body.style.backgroundSize = 'none'
+  }
   let filterChars = [];
   filterChars = recipes.filter((c, index) => {
     return recipes.indexOf(c) === index;
@@ -19,7 +21,7 @@ const IndexTags = ({ recipes }) => {
 
 
 
-  return <section className={`${classes.tags_section}`} style={{marginBottom: '15%'}}>
+  return <section className={`${classes.tags_section}`} style={{ marginBottom: '15%' }}>
     <article className={`${classes.tags}`}>
       {
         filterChars.map((item, i) => {

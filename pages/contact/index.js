@@ -16,7 +16,11 @@ const ContactIndex = () => {
     message: ''
   });
   const { email, firstname, lastname, message } = value;
-
+  
+  if (typeof window !== 'undefined') {
+    document.body.style.backgroundImage = `url('https://wallpaperaccess.com/full/767277.jpg')`;
+    document.body.style.backgroundSize = 'cover';    
+  }
 
   const submit_data = () => {
     if (email && firstname && lastname && message) {

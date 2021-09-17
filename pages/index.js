@@ -6,6 +6,13 @@ import classes from '../styles/Home.module.css';
 
 
 const HomePage = ({ recipes }) => {
+  if (typeof window !== 'undefined') {
+    document.body.style.backgroundImage = `none`;
+    document.body.style.backgroundSize = 'none'
+  }
+
+
+
   return <section className={`${classes.home_section}`}>
     <article className={`shadow-lg ${classes.image_section}`}>
       <Image width="1300" height="350"
