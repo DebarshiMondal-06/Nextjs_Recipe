@@ -5,7 +5,7 @@ const sendEmail = async (req, res) => {
   try {
     const { email, name } = req.query;
     const mailoptions = {
-      from: 'mondal@mail.com',
+      from: '"Cuisine" <mondal@mail.com>',
       to: email,
       subject: '𝓬𝓾𝓲𝓼𝓲𝓷𝓮 🍽️🍔🥘🍽️',
       html: `

@@ -56,7 +56,7 @@ const View = () => {
           </main >
           <section className={`${classes.recipe_part} row mt-2`}>
             <div className="col-md-5 mb-4">
-              <h2>Integrients</h2>
+              <h2>Ingridents</h2>
               <ul>
                 {
                   arrIng && arrIng.map((items, i) => {
